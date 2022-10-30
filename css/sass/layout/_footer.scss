@@ -1,0 +1,15 @@
+/* start footer */
+footer {
+  @include centring-flex;
+  height: 70px;
+  background-color: $alt-color;
+  color: $white-color;
+}
+
+footer span {
+  padding: 0px 5px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: $main-color;
+}
+/* end footer */

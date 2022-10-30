@@ -1,0 +1,92 @@
+/* start header */
+header {
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  padding: 15px;
+  z-index: 1111;
+  transition: $main-transition;
+  .logo {
+    border-style: none;
+    width: 70px;
+    height: 30px;
+  }
+  .links-menu {
+    position: relative;
+    .icon {
+      cursor: pointer;
+      width: 30px;
+      display: flex;
+      flex-flow: wrap row-reverse;
+      span {
+        background-color: #24484f;
+        margin-bottom: 5px;
+        height: 2.5px;
+        width: 100%;
+        &:nth-child(2) {
+          width: 65%;
+          transition: 0.5s all ease;
+        }
+      }
+    }
+    .nav-list {
+      list-style: none;
+      cursor: pointer;
+      position: absolute;
+      right: 0%;
+      top: 70px;
+      width: 200px;
+      visibility: hidden;
+      opacity: 0;
+      z-index: -1111111;
+      transition: opacity, top 0.3s ease;
+      background-color: $main-bg-color;
+      &::before {
+        content: "";
+        position: absolute;
+        right: 0%;
+        bottom: 100%;
+        border-width: 15px;
+        border-style: solid;
+        border-color: transparent transparent $main-bg-color transparent;
+      }
+      .nav-item {
+        .nav-link {
+          display: block;
+          padding: 13px 15px;
+          text-decoration: none;
+          transition: $xl-transition;
+          color: $trouble-3;
+          &:hover {
+            padding-left: 30px;
+          }
+        }
+        &:not(:last-child) {
+          .nav-link {
+            border-bottom: solid 1px $trouble-d;
+          }
+        }
+      }
+    }
+    &.open {
+      .icon {
+        span:nth-child(2) {
+          width: 100%;
+        }
+      }
+      .nav-list {
+        top: 40px;
+        visibility: visible;
+        opacity: 1;
+        z-index: 11111;
+      }
+    }
+  }
+  &.active {
+    background-color: $white-color;
+    padding: 6px;
+    box-shadow: 0px 10px 19px 0 #7d7d7d1a;
+  }
+}
+/* end header */

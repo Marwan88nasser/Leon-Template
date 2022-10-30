@@ -1,0 +1,82 @@
+* {
+  @include reset-all;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Work Sans", sans-serif;
+}
+
+ul {
+  @include reset-ul;
+}
+
+a {
+  @include a-reset;
+}
+
+/* start scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #f6f6f6f6;
+  box-shadow: 0 0 2px #ddd inset;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #0ec2af;
+  border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: $main-color;
+}
+/* end scrollbar */
+
+.up-btn {
+  &.show {
+    right: 16px;
+  }
+  position: fixed;
+  bottom: 16px;
+  right: -50px;
+  width: 38px;
+  height: 38px;
+  @include centring-flex;
+  color: $white-color;
+  background-color: $main-color;
+  z-index: 999;
+  border-radius: 6px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: $main-transition;
+  &::before {
+    content: "";
+    @include reset-position;
+    width: 0%;
+    height: 100%;
+    z-index: -1;
+    background-color: #0db7a6;
+    transition: $main-transition;
+  }
+  &:hover::before {
+    width: 100%;
+  }
+  &:hover i,
+  &:hover svg {
+    animation: top-and-down 2s ease 0s infinite alternate-reverse both;
+  }
+  i,
+  svg {
+    font-size: 17px;
+  }
+}

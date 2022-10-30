@@ -1,41 +1,56 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="sr">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>leon | template-one</title>
-    <!-- main template css file -->
-    <link rel="stylesheet" href="css/style.css" />
-    <!-- render all elements normaliy -->
+    <!-- Bootstrap Framework Css File -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <!-- Main  Css File -->
+    <link rel="stylesheet" href="css/main.css" />
+    <!--  Normalize Css File -->
     <link rel="stylesheet" href="css/normalize.css" />
-    <!-- font awesome library -->
+    <!-- Font Awesome Library File -->
     <link rel="stylesheet" href="css/all.min.css" />
-    <!-- google fonts -->
+    <!-- Google Fonts Cdn -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300;400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
+    <!-- Css Swiper Library File -->
+    <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+    <!-- Scrollreveal Library File -->
+    <script src="js/scrollreveal.min.js"></script>
   </head>
   <body>
+    <!-- start scroll to top button -->
+    <div class="up-btn" id="up-btn">
+      <i class="fa-solid fa-angles-up"></i>
+    </div>
+    <!-- end scroll to top button -->
     <!-- start header -->
-    <header>
-      <div class="container">
-        <img class="logo" src="images/logo.png" alt="logo" />
-        <div class="links">
-          <span class="icon">
+    <header id="main-nav">
+      <div class="container d-flex align-items-center justify-content-between">
+        <a href="index.html">
+          <h1 class="m-0">
+            <img class="logo" src="images/logo.png" alt="logo" />
+          </h1>
+        </a>
+        <div class="links-menu" id="menu-holder">
+          <div class="icon">
             <span></span>
             <span></span>
             <span></span>
-          </span>
-          <ul>
-            <li><a href="#features" target="_self">features</a></li>
-            <li><a href="#services" target="_self">services</a></li>
-            <li><a href="#portfolio" target="_self">portfolio</a></li>
-            <li><a href="#about" target="_self">about</a></li>
-            <li><a href="#contact" target="_self">contact</a></li>
+          </div>
+          <ul class="nav-list" id="dropDown-menu">
+            <li class="nav-item"><a class="nav-link" data-section="features">features</a></li>
+            <li class="nav-item"><a class="nav-link" data-section="services">services</a></li>
+            <li class="nav-item"><a class="nav-link" data-section="portfolio">portfolio</a></li>
+            <li class="nav-item"><a class="nav-link" data-section="about">about</a></li>
+            <li class="nav-item"><a class="nav-link" data-section="contact">contact</a></li>
           </ul>
         </div>
       </div>
@@ -43,104 +58,188 @@
     <!-- end header -->
     <!-- start landing -->
     <div class="landing-page">
-      <div class="intro-text">
-        <h1>hello there</h1>
-        <p>
-          we are leon - super creative & <br />
-          Minimal Agency Web Template
-        </p>
+      <div class="swiper mySwiper landing-swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide slide-one">
+            <div class="intro-text">
+              <h1 class="title" data-swiper-parallax="-700">hello there</h1>
+              <p class="pre" data-swiper-parallax="-1000">
+                we are leon - super creative & <br />
+                Minimal Agency Web Template
+              </p>
+            </div>
+            <img src="images/slide-img-1.jpg" alt="silde image" />
+          </div>
+          <div class="swiper-slide slide-two">
+            <div class="intro-text">
+              <h1 class="title" data-swiper-parallax="-700">hello there</h1>
+              <p class="pre" data-swiper-parallax="-1000">
+                we are leon - super creative & <br />
+                Minimal Agency Web Template
+              </p>
+            </div>
+            <img src="images/slide-img-2.jpg" alt="silde image" />
+          </div>
+          <div class="swiper-slide slide-three">
+            <div class="intro-text">
+              <h1 class="title" data-swiper-parallax="-700">hello there</h1>
+              <p class="pre" data-swiper-parallax="-1000">
+                we are leon - super creative & <br />
+                Minimal Agency Web Template
+              </p>
+            </div>
+            <img src="images/slide-img-3.jpg" alt="silde image" />
+          </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
       </div>
+      <!-- <div class="swiper landing-swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide slide-one">
+            <div class="intro-text">
+              <h1 class="title">hello there</h1>
+              <p class="pre">
+                we are leon - super creative & <br />
+                Minimal Agency Web Template
+              </p>
+            </div>
+            <img src="images/slide-img-1.jpg" alt="silde image" />
+          </div>
+          <div class="swiper-slide slide-two">
+            <div class="intro-text">
+              <h1>hello there</h1>
+              <p>
+                we are leon - super creative & <br />
+                Minimal Agency Web Template
+              </p>
+            </div>
+            <img src="images/slide-img-2.jpg" alt="silde image" />
+          </div>
+          <div class="swiper-slide slide-three">
+            <div class="intro-text">
+              <h1>hello there</h1>
+              <p>
+                we are leon - super creative & <br />
+                Minimal Agency Web Template
+              </p>
+            </div>
+            <img src="images/slide-img-3.jpg" alt="silde image" />
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div> -->
     </div>
     <!-- end landing -->
     <!-- start features -->
-    <section class="features" id="features">
+    <section class="features pt-5" id="features">
       <div class="container">
-        <div class="feat">
-          <i class="fas fa-magic"></i>
-          <h3>Tell Us Your Idea</h3>
-          <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet
-            alias ratione distinctio natus! Qui illum, magnam, odit
-          </p>
-        </div>
-        <div class="feat">
-          <i class="fas fa-gem"></i>
-          <h3>We Will Do All The Work</h3>
-          <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet
-            alias ratione distinctio natus! Qui illum, magnam, odit
-          </p>
-        </div>
-        <div class="feat">
-          <i class="fas fa-globe-asia"></i>
-          <h3>Your Product is Worldwide</h3>
-          <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet
-            alias ratione distinctio natus! Qui illum, magnam, odit
-          </p>
+        <div class="row">
+          <div class="col-md-6 col-lg-4">
+            <div class="feat feat-one">
+              <i class="fas fa-magic"></i>
+              <h3>Tell Us Your Idea</h3>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Eveniet alias ratione distinctio natus! Qui illum, magnam, odit
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="feat feat-two">
+              <i class="fas fa-gem"></i>
+              <h3>We Will Do All The Work</h3>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Eveniet alias ratione distinctio natus! Qui illum, magnam, odit
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="feat feat-three">
+              <i class="fas fa-globe-asia"></i>
+              <h3>Your Product is Worldwide</h3>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Eveniet alias ratione distinctio natus! Qui illum, magnam, odit
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
     <!-- start features -->
     <!-- start services -->
-    <div class="services" id="services">
+    <div class="services py-5" id="services">
       <div class="container">
         <h2 class="special-heading">Services</h2>
         <p class="special-heading + p">Don't be busy, be productive</p>
         <div class="services-content">
-          <div class="col">
-            <!-- Start Service -->
-            <div class="srv">
-              <i class="fas fa-palette fa-2x"></i>
-              <div class="text">
-                <h3>Graphic Design</h3>
-                <p>
-                  Graphic design is the process of visual communication and
-                  problem-solving using one or more of typography, photography
-                  and illustration.
-                </p>
+          <div class="row g-4">
+            <div class="col-md-12 col-md-12 col-lg-9">
+              <div class="row g-4">
+                <div class="col col-12 col-md-6">
+                  <div class="srv">
+                    <i class="fas fa-palette fa-2x"></i>
+                    <div class="text">
+                      <h3>Graphic Design</h3>
+                      <p>
+                        Graphic design is the process of visual communication
+                        and problem-solving using one or more of typography,
+                        photography and illustration.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col col-12 col-md-6">
+                  <div class="srv">
+                    <i class="fab fa-sketch fa-2x"></i>
+                    <div class="text">
+                      <h3>UI & UX</h3>
+                      <p>
+                        Process of enhancing user satisfaction with a product by
+                        improving the usability, accessibility, and pleasure
+                        provided in the interaction.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col col-12 col-md-6">
+                  <div class="srv">
+                    <i class="fas fa-vector-square fa-2x"></i>
+                    <div class="text">
+                      <h3>Web Design</h3>
+                      <p>
+                        Web design encompasses many different skills and
+                        disciplines in the production and maintenance of
+                        websites.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col col-12 col-md-6">
+                  <div class="srv">
+                    <i class="fas fa-pencil-ruler fa-2x"></i>
+                    <div class="text">
+                      <h3>Web Development</h3>
+                      <p>
+                        Web development is a broad term for the work involved in
+                        developing a web site for the Internet or an intranet.
+                      </p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
-            <div class="srv">
-              <i class="fab fa-sketch fa-2x"></i>
-              <div class="text">
-                <h3>UI & UX</h3>
-                <p>
-                  Process of enhancing user satisfaction with a product by
-                  improving the usability, accessibility, and pleasure provided
-                  in the interaction.
-                </p>
+            <div class="col-0 col-md-0 col-lg-3">
+              <div class="col col-md-12">
+                <div class="image image-column">
+                  <img src="images/services.jpg" alt="" />
+                </div>
               </div>
-            </div>
-            <!-- End Service -->
-          </div>
-          <div class="col">
-            <!-- Start Services -->
-            <div class="srv">
-              <i class="fas fa-vector-square fa-2x"></i>
-              <div class="text">
-                <h3>Web Design</h3>
-                <p>
-                  Web design encompasses many different skills and disciplines
-                  in the production and maintenance of websites.
-                </p>
-              </div>
-            </div>
-            <div class="srv">
-              <i class="fas fa-pencil-ruler fa-2x"></i>
-              <div class="text">
-                <h3>Web Development</h3>
-                <p>
-                  Web development is a broad term for the work involved in
-                  developing a web site for the Internet or an intranet.
-                </p>
-              </div>
-            </div>
-            <!-- End Services -->
-          </div>
-          <div class="col">
-            <div class="image image-column">
-              <img src="images/services.jpg" alt="" />
             </div>
           </div>
         </div>
@@ -148,69 +247,77 @@
     </div>
     <!-- End Services -->
     <!-- start portfolio -->
-    <div class="portfolio" id="portfolio">
+    <div class="portfolio py-5" id="portfolio">
       <div class="container">
         <h2 class="special-heading">portfolio</h2>
         <p class="special-heading + p">
           If you do it right, it will last forever.
         </p>
         <div class="portfolio-content">
-          <div class="port">
-            <!-- start port one  -->
-            <div class="image">
-              <img src="images/portfolio-1.jpg" alt="portfolio-1" />
+          <div class="row g-4">
+            <div class="col-md-6 col-lg-4">
+              <div class="port port-one shadow">
+                <!-- start port one  -->
+                <div class="image">
+                  <img src="images/portfolio-1.jpg" alt="portfolio-1" />
+                </div>
+                <div class="text">
+                  <h3>Project Here</h3>
+                  <p>
+                    My creative ability is very difficult to measure because it
+                    can manifest in so many surprising and.
+                  </p>
+                </div>
+              </div>
             </div>
-            <div class="text">
-              <h3>Project Here</h3>
-              <p>
-                My creative ability is very difficult to measure because it can
-                manifest in so many surprising and.
-              </p>
+            <!-- end port one  -->
+            <!-- start port two  -->
+            <div class="col-md-6 col-lg-4">
+              <div class="port port-two shadow">
+                <div class="image">
+                  <img src="images/portfolio-2.jpg" alt="portfolio-2" />
+                </div>
+                <div class="text">
+                  <h3>Project Here</h3>
+                  <p>
+                    My creative ability is very difficult to measure because it
+                    can manifest in so many surprising and.
+                  </p>
+                </div>
+              </div>
             </div>
+            <!-- end port two  -->
+            <!-- start port three  -->
+            <div class="col-md-6 col-lg-4">
+              <div class="port port-three shadow">
+                <div class="image">
+                  <img src="images/portfolio-3.jpg" alt="portfolio-3" />
+                </div>
+                <div class="text">
+                  <h3>Project Here</h3>
+                  <p>
+                    My creative ability is very difficult to measure because it
+                    can manifest in so many surprising and.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- end port three -->
           </div>
-          <!-- end port one  -->
-          <!-- start port two  -->
-          <div class="port">
-            <div class="image">
-              <img src="images/portfolio-2.jpg" alt="portfolio-2" />
-            </div>
-            <div class="text">
-              <h3>Project Here</h3>
-              <p>
-                My creative ability is very difficult to measure because it can
-                manifest in so many surprising and.
-              </p>
-            </div>
-          </div>
-          <!-- end port two  -->
-          <!-- start port three  -->
-          <div class="port">
-            <div class="image">
-              <img src="images/portfolio-3.jpg" alt="portfolio-3" />
-            </div>
-            <div class="text">
-              <h3>Project Here</h3>
-              <p>
-                My creative ability is very difficult to measure because it can
-                manifest in so many surprising and.
-              </p>
-            </div>
-          </div>
-          <!-- end port three -->
         </div>
       </div>
     </div>
     <!-- end portfolio -->
     <!-- start about -->
-    <div class="about" id="about">
+    <div class="about py-5" id="about">
       <div class="container">
         <h2 class="special-heading">About</h2>
         <p class="special-heading + p">Less is more work</p>
         <div class="about-content">
-          <div class="image">
+          <div class="image image-sr">
             <img src="images/about.jpg" alt="image" />
           </div>
-          <div class="text">
+          <div class="text text-sr">
             <p>
               Lorem, ipsum dolor sit amet consectetur adipisicing elit.
               Voluptatibus amet distinctio labore possimus a. Beatae Lorem,
@@ -230,20 +337,22 @@
     </div>
     <!-- end about -->
     <!-- start contact -->
-    <div class="contact" id="contact">
+    <div class="contact py-5" id="contact">
       <div class="container">
         <h2 class="special-heading">contact</h2>
         <p class="special-heading + p">we are born to create</p>
         <div class="contact-content">
           <div class="con-one">
             <p>Feel free to drop us a line at:</p>
-            <a href="mailto:leonagency@mail.com?subject=Contact" class="link">leonagency@mail.com</a>
+            <a href="mailto:leonagency@mail.com?subject=Contact" class="link"
+              >leonagency@mail.com</a
+            >
           </div>
           <div class="con-two">
             <i class="fab fa-twitter"></i>
             <i class="fab fa-facebook-f"></i>
             <i class="fab fa-youtube"></i>
-            <p>Find Us On Social Networks</p>
+            <p class="mb-0">Find Us On Social Networks</p>
           </div>
         </div>
       </div>
@@ -252,5 +361,14 @@
     <!-- start footer -->
     <footer>&copy; 2021 <span> leon </span> all right reserved</footer>
     <!-- end footer -->
+
+    <!-- Js Swiper  -->
+    <script src="js/swiper-bundle.min.js"></script>
+    <!-- Bootstrap Framework Js File -->
+    <script src="js/swiper-bundle.min.js"></script>
+    <!-- FontAwesome Library Js File -->
+    <script src="js/all.min.js"></script>
+    <!-- Main Js File -->
+    <script src="js/main.js"></script>
   </body>
 </html>

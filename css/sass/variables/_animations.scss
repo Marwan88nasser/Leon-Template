@@ -1,0 +1,9 @@
+// move to top animation
+@keyframes move-top-bottom {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-15px);
+  }
+}

@@ -1,0 +1,68 @@
+// start landing slider style
+.landing-swiper {
+  width: 100%;
+  height: 100%;
+  .swiper-slide {
+    position: relative;
+    &::before {
+      content: "";
+      @include reset-position;
+      width: 100%;
+      height: 100%;
+      opacity: 0.6;
+    }
+    &.slide-one {
+      &::before {
+        background-image: linear-gradient(
+          to left bottom,
+          #101010,
+          #383838,
+          #636363,
+          #939393,
+          #c5c5c5
+        );
+      }
+    }
+    &.slide-two {
+      &::before {
+        background-image: linear-gradient(
+          to left bottom,
+          #d164a4,
+          #9e61a1,
+          #6f5b91,
+          #4a5177,
+          #344357
+        );
+      }
+    }
+    &.slide-three {
+      &::before {
+        background-image: linear-gradient(
+          to right top,
+          #4a4e57,
+          #60636d,
+          #777983,
+          #8f909a,
+          #a7a8b2
+        );
+      }
+    }
+    .intro-text {
+      @include center-position;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  .swiper-button-next:after,
+  .swiper-button-prev:after {
+    color: #ebeaea;
+    font-size: 30px !important;
+  }
+  .swiper-pagination-bullet-active {
+    background-color: #ebeaea !important;
+  }
+}
+// end landing slider style
