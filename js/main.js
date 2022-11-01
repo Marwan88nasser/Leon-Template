@@ -1,7 +1,17 @@
 // main menu effect
 const menuHolder = document.querySelector("#menu-holder");
-menuHolder.addEventListener("mousemove", () => menuHolder.classList.add("open"));
-menuHolder.addEventListener("mouseleave", () => menuHolder.classList.remove("open"));
+const navList = document.querySelector(".nav-list")
+
+menuHolder.addEventListener("mousemove", () => {
+  setTimeout(() => menuHolder.classList.add("open"))
+  navList.style.display= "block"
+  
+});
+menuHolder.addEventListener("mouseleave", () => {
+  navList.style.display= "none"
+  setTimeout(() => menuHolder.classList.remove("open"))
+  
+});
 
 // Set Scroll Into Target Section 
 const navLinks = document.querySelectorAll(".nav-link");
@@ -49,25 +59,25 @@ const swiper = new Swiper(swiperElement, {
 ScrollReveal({ reset: true });
 
 // special Heading Effect Animation
-ScrollReveal().reveal('.special-heading', { duration: 3500, delay: 200, origin: 'left', distance: '200px' })
+ScrollReveal().reveal('.special-heading', { duration: 3000, delay: 100, origin: 'left', distance: '200px' })
 
 // Feature Effect Animation
-ScrollReveal().reveal('.feat-one', { duration: 3000, delay: 200, origin: 'bottom', distance: '100px' })
-ScrollReveal().reveal('.feat-two', { duration: 3000, delay: 500, origin: 'bottom', distance: '100px' })
-ScrollReveal().reveal('.feat-three', { duration: 3000, delay: 900, origin: 'bottom', distance: '100px' })
+ScrollReveal().reveal('.feat-one', { duration: 2000, delay: 100, origin: 'bottom', distance: '100px' })
+ScrollReveal().reveal('.feat-two', { duration: 2000, delay: 250, origin: 'bottom', distance: '100px' })
+ScrollReveal().reveal('.feat-three', { duration: 2000, delay: 350, origin: 'bottom', distance: '100px' })
 
 // Services Effect Animation
-ScrollReveal().reveal('.srv', { duration: 3000, delay: 0, origin: 'bottom', distance: '100px' })
-ScrollReveal().reveal('.image-column', { duration: 3000, delay: 0, origin: 'right', distance: '20px' })
+ScrollReveal().reveal('.srv', { duration: 2000, delay: 0, origin: 'bottom', distance: '100px' })
+ScrollReveal().reveal('.image-column', { duration: 2000, delay: 0, origin: 'right', distance: '20px' })
 
 // Portfolio Effect Animation
-ScrollReveal().reveal('.port-one', { duration: 3000, delay: 200, origin: 'left', distance: '70px' })
-ScrollReveal().reveal('.port-two', { duration: 3000, delay: 500, origin: 'bottom', distance: '120px' })
-ScrollReveal().reveal('.port-three', { duration: 3000, delay: 900, origin: 'right', distance: '12px' })
+ScrollReveal().reveal('.port-one', { duration: 2000, delay: 100, origin: 'left', distance: '70px' })
+ScrollReveal().reveal('.port-two', { duration: 2000, delay: 250, origin: 'bottom', distance: '120px' })
+ScrollReveal().reveal('.port-three', { duration: 2000, delay: 350, origin: 'right', distance: '12px' })
 
 // About Effect Animation
-ScrollReveal().reveal('.text-sr', { duration: 3000, delay: 0, origin: 'top', distance: '100px' })
-ScrollReveal().reveal('.image-sr', { duration: 3000, delay: 0, origin: 'left', distance: '50px' })
+ScrollReveal().reveal('.text-sr', { duration: 2000, delay: 0, origin: 'top', distance: '100px' })
+ScrollReveal().reveal('.image-sr', { duration: 2000, delay: 0, origin: 'left', distance: '50px' })
 
 // Contact Effect Animation
-ScrollReveal().reveal('.contact-content', { duration: 3000, delay: 500, origin: 'bottom', distance: '120px' })
+ScrollReveal().reveal('.contact-content', { duration: 2500, delay: 100, origin: 'bottom', distance: '120px' })
