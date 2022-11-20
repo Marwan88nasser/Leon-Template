@@ -276,6 +276,7 @@ footer span {
   width: 100%;
   height: 100%;
   opacity: 0.6;
+  z-index: 1;
 }
 .landing-swiper .swiper-slide.slide-one::before {
   background-image: linear-gradient(to left bottom, #101010, #383838, #636363, #939393, #c5c5c5);
@@ -291,12 +292,15 @@ footer span {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  z-index: 2;
 }
 .landing-swiper .swiper-slide img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  -webkit-animation: kenburns-top-right 18s infinite ease-out alternate both;
+          animation: kenburns-top-right 18s infinite ease-out alternate both;
 }
 .landing-swiper .swiper-button-next:after,
 .landing-swiper .swiper-button-prev:after {
