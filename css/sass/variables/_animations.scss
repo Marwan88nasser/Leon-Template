@@ -7,3 +7,15 @@
     transform: translateY(-15px);
   }
 }
+
+// animation kenburns-top-right
+@keyframes kenburns-top-right {
+  0% {
+    transform: scale(1) translate(0, 0);
+    transform-origin: 84% 16%;
+  }
+  100% {
+    transform: scale(1.25) translate(20px, -15px);
+    transform-origin: right top;
+  }
+}
